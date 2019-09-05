@@ -36,7 +36,7 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|twwet|text|
+|text|text|
 |image|string|
 |user_id|references|null: false, foreign_key: true|
 ### Association
@@ -46,8 +46,9 @@ Things you may want to cover:
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|tweet|text|
+|text|text|
 |user_id|references|null: false, foreign_key: true|
+|message_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :message
 - belongs_to :user
