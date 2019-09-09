@@ -49,7 +49,6 @@ html {
   top: 85px;
   width: 950px;
   margin: 0 auto;
-  background-color: beige;
   &__title {
     padding: 30px 30px 30px 30px;
     font-family: sans-serif;
@@ -127,15 +126,17 @@ html {
       font-size: 15px;
     }
     &__link {
+      font-size: 15px;
       &__list {
         display: flex;
         position: relative;
         top: 0px;
         right: 0px;
+        font-size: 15px;
       }
       .icon {
         color: black;
-        font-size: 20px;
+        font-size: px;
         margin-right: 8px;
       }
     }
@@ -143,9 +144,11 @@ html {
   &__copyright {
     position: relative;
     top: 60px;
+    bottom: 0;
     left: 650px;
     width: 200px;
     height: 30px;
+    font-size: 10px;
 }
   
 }
