@@ -1,17 +1,56 @@
-.header
-  .header__left
-    .logo
-      %h1.site-title
-        suhuri
-      %h2.site-sub-title
-        金継ぎ教室
-  .header__right
-    %ul.menu
-      %li.menu__item 金継ぎ教室について
-      %li.menu__item カレンダー
-      %li.menu__item ご予約フォーム
-      %li.menu__item アクセス
-.message
-  
 
+= render 'messages/header'
+
+.message
+  .message__title
+    作品やお知らせを投稿していきます。気軽に作品の投稿や質問などをしてください。
+  .message__timeline
+    .message__timeline__info
+      .message__timeline__info__user
+      みずき
+      .message__timeline__info__date
+      2019.9.8 
+    .message__timeline__text
+    マークアップ中
+    .message__timeline__image
+    画像
+  .message__timeline
+    .message__timeline__info
+      .message__timeline__info__user
+      なかむら
+      .message__timeline__info__date
+      2019.9.9 
+    .message__timeline__text
+    今の所は楽しくやってる
+    .message__timeline__image
+    画像
+  .message__post
+    %form.post-box
+    %input.post-box__message
+      %label.post-box__message__image 
+        = fa_icon 'picture-o', class: 'icon'
+        %input.hidden{type: 'file'}
+    %input.post-box__submit{type: 'submit', value: 'Send'}
+    
 .footer
+  .footer__left
+    お知らせ
+    .footer__left__text
+      今月の教室
+  .footer__right
+    .footer__right__about
+      suhuri
+    .footer__right__about
+      営業時間: 10:00~17:00
+    .footer__right__link
+      SNS
+      %ul.footer__right__link__list
+        %li.link__list
+          = link_to do
+            = fa_icon 'twitter', class: 'icon'
+        %li.link__list
+          = link_to do
+            = fa_icon 'instagram', class: 'icon'
+.footer__copyright
+  © 2019 suhuri.
+   
