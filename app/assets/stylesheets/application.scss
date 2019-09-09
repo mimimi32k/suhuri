@@ -1,0 +1,154 @@
+@import "./reset";
+@import "font-awesome";
+
+
+html {
+  font-family: 'YuMincho', serif;
+  font-family: 'Lexend Deca', serif;
+}
+
+.header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid silver;
+  color: black;
+  background-color: white;
+  &__left {
+    float: left;
+    width: 160px;
+    margin: 0;
+    .logo {
+      margin: 10px 30px 10px 60px;
+      .site-title {
+        font-size: 30px;
+      }
+      .site-sub-title{
+        font-size: 13px;
+      }
+    }
+  }
+  &__right {
+    margin-right: 40px;
+    .menu {
+      float: right;
+      font-size: 13px;
+      .menu__item {
+        float: left;
+        margin: 30px;
+      }
+    }
+  }
+}
+
+.message {
+  overflow: scroll; 
+  height: calc(100vh - 80px - 100px);
+  position: relative;
+  top: 85px;
+  width: 950px;
+  margin: 0 auto;
+  &__title {
+    padding: 30px 30px 30px 30px;
+    font-family: sans-serif;
+   }
+  &__timeline {
+   
+    margin: 0 40px 0px 40px;
+    &__info {
+      display: flex;
+      padding-top: 50px;
+      padding-bottom: 10px;
+      &__user {
+        
+      }
+      &__date {
+        margin-left: 10px;
+      }
+    }
+    &__text {
+      margin-top: 10px;
+    }
+    &__image {
+      margin-top: 20px;
+    }
+  }
+  &__post {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    .post-box {
+      &__message {
+        position: relative;
+        width: 600px;
+        line-height: 40px;
+        &__image {
+          font-size: 20px;
+          position: absolute;
+          top: 18px;
+          right: 210px;
+          .hidden {
+            display: none;
+          }
+        }
+      }
+      &__submit {
+        margin-left: 5px;
+    }
+   }
+   
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px dotted gray;
+  position: relative;
+  top: 80px;
+  bottom: 0;
+  margin: 0 auto;
+  width: 80%;
+  height: 100px;
+  margin-top: 10px;
+  &__left {
+    &__text {
+
+    }
+  }
+  &__right {
+    &__about {
+      font-size: 15px;
+    }
+    &__link {
+      font-size: 15px;
+      &__list {
+        display: flex;
+        position: relative;
+        top: 0px;
+        right: 0px;
+        font-size: 15px;
+      }
+      .icon {
+        color: black;
+        font-size: px;
+        margin-right: 8px;
+      }
+    }
+  }
+  &__copyright {
+    position: relative;
+    top: 60px;
+    bottom: 0;
+    left: 650px;
+    width: 200px;
+    height: 30px;
+    font-size: 10px;
+}
+  
+}
