@@ -66,3 +66,4 @@ gem 'sprockets', '3.7.2'
 gem "nokogiri", ">= 1.10.4"
 gem 'haml-rails'
 gem "font-awesome-rails"
+gem 'devise'

@@ -2,6 +2,7 @@
 @import "font-awesome";
 
 
+
 html {
   font-family: 'YuMincho', serif;
   font-family: 'Lexend Deca', serif;
@@ -21,6 +22,10 @@ html {
     margin: 0;
     .logo {
       margin: 10px 30px 10px 60px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
       .site-title {
         font-size: 30px;
       }
@@ -31,6 +36,12 @@ html {
   }
   &__right {
     margin-right: 40px;
+    .user_nav {
+      
+    }
+    .new_user {
+      
+    }
     .menu {
       float: right;
       font-size: 13px;
