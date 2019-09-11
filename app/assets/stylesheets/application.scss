@@ -36,18 +36,17 @@ html {
   }
   &__right {
     margin-right: 40px;
-    .user_nav {
-      
-    }
-    .new_user {
-      
-    }
+   
     .menu {
       float: right;
       font-size: 13px;
       .menu__item {
         float: left;
         margin: 30px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
       }
     }
   }
@@ -161,5 +160,24 @@ html {
     height: 30px;
     font-size: 10px;
 }
-  
+
+}
+
+.calendar {
+  width: 950px;
+  margin: 0 auto;
+}
+.top {
+  width: 50px;
+  margin: 0 auto;
+  font-size: 50px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.access {
+  width: 950px;
+  margin: 0 auto;
 }

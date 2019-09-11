@@ -7,7 +7,13 @@
         金継ぎ教室  
   .header__right
     %ul.menu
-      %li.menu__item 金継ぎ教室について
-      %li.menu__item カレンダー
-      %li.menu__item ご予約フォーム
-      %li.menu__item アクセス
+      %li.menu__item 
+        = link_to "金継ぎ教室について", schools_path
+      %li.menu__item 
+        = link_to "カレンダー", calendars_path
+      %li.menu__item 
+        = link_to "ご予約フォーム", reservations_path
+      %li.menu__item 
+        = link_to "アクセス", accesses_path
+        
+        

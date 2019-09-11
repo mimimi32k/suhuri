@@ -12,9 +12,12 @@
 
 
   %body
+    %p.notice= notice
+    %p.alert= alert
+
     - if user_signed_in?
       .user_nav
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout'
     - else
       .new_user
         = link_to "ログイン", new_user_session_path, class: 'post'
