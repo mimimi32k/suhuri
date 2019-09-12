@@ -8,9 +8,23 @@ html {
   font-family: 'Lexend Deca', serif;
 }
 
+.logout {
+  font-family: sans-serif;
+  width: 80px;
+  height: 30px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 30px;
+  left: 550px;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: solid 1px #000000;
+}
+
 .header {
   position: fixed;
-  z-index: 999;
+  z-index: 900;
   width: 100%;
   height: 80px;
   border-bottom: 1px solid silver;
@@ -160,12 +174,36 @@ html {
     height: 30px;
     font-size: 10px;
 }
+}
 
+.school {
+  margin: 80px -50px 50px 80px;
+  .about_kintsugi {
+    float: right;
+    width: 800px;
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .about_school {
+    float: right;
+    width: 800px;
+  }
 }
 
 .calendar {
+  margin-top: 20px;
+  position: relative;
+  top: 10px;
+  left: 330px;
+}
+
+.access {
   width: 950px;
   margin: 0 auto;
+  position: relative;
+  top: 40px;
+  left: 100px;
 }
 .top {
   width: 50px;
@@ -177,7 +215,3 @@ html {
   }
 }
 
-.access {
-  width: 950px;
-  margin: 0 auto;
-}
