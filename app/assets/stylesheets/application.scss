@@ -23,6 +23,37 @@ html {
   top: 100px;
   left: 500px;
 }
+
+#user_name {
+  width: 300px;
+  height: 30px;
+}
+
+#user_email {
+  width: 300px;
+  height: 30px;
+}
+
+#user_password {
+  width: 300px;
+  height: 30px;
+}
+
+#user_password_confirmation {
+  width: 300px;
+  height: 30px;
+}
+
+.field3 {
+  width:300px;
+}
+
+.passwordfield {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
 .post {
   font-family: sans-serif;
   width: 80px;
@@ -37,6 +68,7 @@ html {
   border: solid 1px #000000;
   margin-right: 20px;
 }
+
 .logout {
   font-family: sans-serif;
   width: 80px;
@@ -49,6 +81,23 @@ html {
   padding: 0.5em 1em;
   margin: 2em 0;
   border: solid 1px #000000;
+}
+
+.reset {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  top: 100px;
+  left: 580px;
+}
+
+.actions-btn {
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+  border: solid 1px;
+  border-radius: 5px;
+
 }
 
 .header {
@@ -79,9 +128,6 @@ html {
   }
   &__right {
     margin-right: 40px;
-
-  
-   
     .menu {
       float: right;
       font-size: 13px;
@@ -109,7 +155,6 @@ html {
     font-family: sans-serif;
    }
   &__timeline {
-   
     margin: 0 40px 0px 40px;
     &__info {
       display: flex;
