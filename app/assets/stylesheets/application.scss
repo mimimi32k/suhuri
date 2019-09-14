@@ -2,14 +2,107 @@
 @import "font-awesome";
 
 
+
 html {
   font-family: 'YuMincho', serif;
   font-family: 'Lexend Deca', serif;
 }
 
+.login {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 100px;
+  left: 500px;
+}
+
+.signup {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 100px;
+  left: 500px;
+}
+
+#user_name {
+  width: 300px;
+  height: 30px;
+}
+
+#user_email {
+  width: 300px;
+  height: 30px;
+}
+
+#user_password {
+  width: 300px;
+  height: 30px;
+}
+
+#user_password_confirmation {
+  width: 300px;
+  height: 30px;
+}
+
+.field3 {
+  width:300px;
+}
+
+.passwordfield {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.post {
+  font-family: sans-serif;
+  width: 80px;
+  height: 30px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 30px;
+  left: 450px;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: solid 1px #000000;
+  margin-right: 20px;
+}
+
+.logout {
+  font-family: sans-serif;
+  width: 80px;
+  height: 30px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 30px;
+  left: 550px;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: solid 1px #000000;
+}
+
+.reset {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  top: 100px;
+  left: 580px;
+}
+
+.actions-btn {
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+  border: solid 1px;
+  border-radius: 5px;
+
+}
+
 .header {
   position: fixed;
-  z-index: 999;
+  z-index: 900;
   width: 100%;
   height: 80px;
   border-bottom: 1px solid silver;
@@ -21,6 +114,10 @@ html {
     margin: 0;
     .logo {
       margin: 10px 30px 10px 60px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
       .site-title {
         font-size: 30px;
       }
@@ -37,6 +134,10 @@ html {
       .menu__item {
         float: left;
         margin: 30px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
       }
     }
   }
@@ -54,7 +155,6 @@ html {
     font-family: sans-serif;
    }
   &__timeline {
-   
     margin: 0 40px 0px 40px;
     &__info {
       display: flex;
@@ -150,5 +250,55 @@ html {
     height: 30px;
     font-size: 10px;
 }
-  
 }
+
+.school {
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 90px;
+  left: 70px;
+  .about_kintsugi {
+    float: right;
+    width: 800px;
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .about_school {
+    float: right;
+    width: 800px;
+  }
+}
+
+.calendar {
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 90px;
+  left: 330px;
+}
+
+.reservations{
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 90px;
+  left: 330px;
+}
+
+.access {
+  height: calc(100vh - 80px);
+  width: 950px;
+  margin: 0 auto;
+  position: relative;
+  top: 90px; 
+  left: 180px;
+}
+.top {
+  width: 50px;
+  margin: 0 auto;
+  font-size: 50px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
