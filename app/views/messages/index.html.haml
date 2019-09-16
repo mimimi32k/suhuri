@@ -4,33 +4,17 @@
 .message
   .message__title
     作品やお知らせを投稿していきます。気軽に作品の投稿や質問などをしてください。
-  .message__timeline
-    .message__timeline__info
-      .message__timeline__info__user
-        みずき
-      .message__timeline__info__date
-        2019.9.8 
-    .message__timeline__text
-      マークアップ中
-    .message__timeline__image
-      画像
-  .message__timeline
-    .message__timeline__info
-      .message__timeline__info__user
-        なかむら
-      .message__timeline__info__date
-        2019.9.9 
-    .message__timeline__text
-      今の所は楽しくやってる
-    .message__timeline__image
-      画像
+ 
+    = render partial: 'message', collection: @messages
+    
   .message__post
-    %form.post-box
-    %input.post-box__message
-      %label.post-box__message__image 
-        = fa_icon 'picture-o', class: 'icon'
-        %input.hidden{type: 'file'}
-    %input.post-box__submit{type: 'submit', value: 'Send'}
+    .post-box
+      = form_for [@message] do |f|
+        = f.text_field :content, class: 'post-box__message', placeholder: 'type a message' do
+          = f.label :image, class: 'post-box__message__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'post-box__submit'
     
 .footer
   .footer__left

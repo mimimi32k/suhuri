@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.all
+    @messages = current_user.messages
   end
-  
+
   def edit
   end
 
