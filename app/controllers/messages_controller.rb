@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    
+    # binding.pry
     if @message.save
       redirect_to messages_path, notice: 'メッセージが送信されました'
     else

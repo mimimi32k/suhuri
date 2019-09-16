@@ -9,7 +9,7 @@
     
 .message__post
   .post-box
-    = form_for [@message] do |f|
+    = form_for [@message] do |f|  
       = f.text_field :content, class: 'post-box__message', placeholder: 'type a message' do
         = f.label :image, class: 'post-box__message__image' 
         = fa_icon 'picture-o', class: 'icon'  
