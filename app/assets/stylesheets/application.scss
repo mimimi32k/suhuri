@@ -4,10 +4,56 @@
 
 
 html {
+  overflow: scroll;
   font-family: 'YuMincho', serif;
   font-family: 'Lexend Deca', serif;
 }
 
+// ヘッダー
+.header {
+  position: fixed;
+  z-index: 900;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid silver;
+  color: black;
+  background-color: white;
+  &__left {
+    float: left;
+    width: 160px;
+    margin: 0;
+    .logo {
+      margin: 10px 30px 10px 60px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .site-title {
+        font-size: 30px;
+      }
+      .site-sub-title{
+        font-size: 13px;
+      }
+    }
+  }
+  &__right {
+    margin-right: 40px;
+    .menu {
+      float: right;
+      font-size: 13px;
+      .menu__item {
+        float: left;
+        margin: 30px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+// devise関連
 .login {
   width: 200px;
   height: 200px;
@@ -100,51 +146,66 @@ html {
 
 }
 
-.header {
-  position: fixed;
-  z-index: 900;
-  width: 100%;
-  height: 80px;
-  border-bottom: 1px solid silver;
-  color: black;
-  background-color: white;
-  &__left {
-    float: left;
-    width: 160px;
-    margin: 0;
-    .logo {
-      margin: 10px 30px 10px 60px;
-      a {
-        text-decoration: none;
-        color: black;
-      }
-      .site-title {
-        font-size: 30px;
-      }
-      .site-sub-title{
-        font-size: 13px;
-      }
+// リンク部分
+// 金継ぎ教室について
+.school {
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 90px;
+  left: 70px;
+  .about_kintsugi {
+    float: right;
+    width: 800px;
+    h1 {
+      font-size: 30px;
     }
   }
-  &__right {
-    margin-right: 40px;
-    .menu {
-      float: right;
-      font-size: 13px;
-      .menu__item {
-        float: left;
-        margin: 30px;
-        a {
-          text-decoration: none;
-          color: black;
-        }
-      }
-    }
+  .about_school {
+    float: right;
+    width: 800px;
+  }
+}
+// カレンダー
+.calendar {
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 90px;
+  left: 330px;
+}
+// 予約フォーム
+.reservations{
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 90px;
+  left: 330px;
+}
+// アクセス
+.access {
+  height: calc(100vh - 80px);
+  width: 950px;
+  margin: 0 auto;
+  position: relative;
+  top: 90px; 
+  left: 180px;
+}
+// トップ画面に戻るボタン
+.top {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 50px;
+  a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: 1;
   }
 }
 
+
+// 投稿画面
 .message {
-  overflow: scroll; 
+  overflow: scroll;
   height: calc(100vh - 80px - 100px);
   position: relative;
   top: 85px;
@@ -192,25 +253,29 @@ html {
           position: absolute;
           top: 18px;
           right: 210px;
-          .hidden {
-            display: none;
-          }
         }
       }
+      .hidden {
+        position: relative;
+        right: 105px;
+        width: 100px;
+        // display: none;
+      }
       &__submit {
-        margin-left: 5px;
+        position: relative;
+        right: 100px;
     }
    }
    
   }
 }
-
+// フッター
 .footer {
   display: flex;
   justify-content: space-around;
   border-top: 1px dotted gray;
   position: relative;
-  top: 80px;
+  top: 180px;
   bottom: 0;
   margin: 0 auto;
   width: 80%;
@@ -236,72 +301,18 @@ html {
       }
       .icon {
         color: black;
-        font-size: px;
         margin-right: 8px;
       }
     }
   }
   &__copyright {
     position: relative;
-    top: 60px;
+    top: 150px;
     bottom: 0;
     left: 650px;
     width: 200px;
     height: 30px;
     font-size: 10px;
 }
-}
-
-.school {
-  height: calc(100vh - 80px);
-  position: relative;
-  top: 90px;
-  left: 70px;
-  .about_kintsugi {
-    float: right;
-    width: 800px;
-    h1 {
-      font-size: 30px;
-    }
-  }
-  .about_school {
-    float: right;
-    width: 800px;
-  }
-}
-
-.calendar {
-  height: calc(100vh - 80px);
-  position: relative;
-  top: 90px;
-  left: 330px;
-}
-
-.reservations{
-  height: calc(100vh - 80px);
-  position: relative;
-  top: 90px;
-  left: 330px;
-}
-
-.access {
-  height: calc(100vh - 80px);
-  width: 950px;
-  margin: 0 auto;
-  position: relative;
-  top: 90px; 
-  left: 180px;
-}
-.top {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  font-size: 50px;
-  a {
-    text-decoration: none;
-    color: black;
-    position: relative;
-    z-index: 1;
-  }
 }
 

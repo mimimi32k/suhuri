@@ -7,31 +7,13 @@
  
     = render partial: 'message', collection: @messages
     
-  .message__post
-    .post-box
-      = form_for [@message] do |f|
-        = f.text_field :content, class: 'post-box__message', placeholder: 'type a message' do
-          = f.label :image, class: 'post-box__message__image' do
-            = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'post-box__submit'
+.message__post
+  .post-box
+    = form_for [@message] do |f|
+      = f.text_field :content, class: 'post-box__message', placeholder: 'type a message' do
+        = f.label :image, class: 'post-box__message__image' 
+        = fa_icon 'picture-o', class: 'icon'  
+      = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'post-box__submit'
     
-.footer
-  .footer__left
-    お知らせ
-    .footer__left__text
-      今月の教室
-  .footer__right
-    .footer__right__about
-      suhuri
-    .footer__right__link
-      SNS
-      %ul.footer__right__link__list
-        %li.link__list
-          = link_to do
-            = fa_icon 'twitter', class: 'icon'
-        %li.link__list
-          = link_to do
-            = fa_icon 'instagram', class: 'icon'
-.footer__copyright
-  © 2019 suhuri.
+= render 'messages/footer'

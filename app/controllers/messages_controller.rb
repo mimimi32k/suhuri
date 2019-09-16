@@ -6,13 +6,12 @@ class MessagesController < ApplicationController
   end
 
   def create
-    # Message.create(message_params)
-    @message = @messages.new(message_params)
-    # Message.create(name: message_params[:name], image: message_params[:image], content: message_params[:content], user_id: current_user.id)
+    @message = Message.new(message_params)
+    
     if @message.save
       redirect_to messages_path, notice: 'メッセージが送信されました'
     else
-      @messages = @messages.includes(:user)
+      @messages = Message.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
