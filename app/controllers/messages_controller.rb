@@ -2,17 +2,16 @@ class MessagesController < ApplicationController
 
   def index
     @message = Message.new
-    @messages = Message.includes(:user)
+    @messages = Message.includes(:user).order("created_at DESC")
   end
 
   def create
     @message = Message.new(message_params)
-    # binding.pry
+    
     if @message.save
-      redirect_to messages_path, notice: 'メッセージが送信されました'
+      redirect_to messages_path
     else
       @messages = Message.includes(:user)
-      flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
   end
