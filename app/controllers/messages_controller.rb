@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
       redirect_to messages_path
     else
       @messages = Message.includes(:user)
+      flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
   end
