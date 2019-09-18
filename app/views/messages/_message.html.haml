@@ -1,0 +1,10 @@
+.message__timeline
+  .message__timeline__info
+    .message__timeline__info__user
+      = message.user.name
+    .message__timeline__info__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  - if message.content.present?
+    .message__timeline__text
+      = message.content
+  = image_tag message.image.url, class: 'message__timeline__image' if message.image.present?

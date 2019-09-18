@@ -2,12 +2,65 @@
 @import "font-awesome";
 
 
-
 html {
+  overflow: scroll;
   font-family: 'YuMincho', serif;
   font-family: 'Lexend Deca', serif;
 }
 
+.notification {
+  width: 250px;
+  height: 20px;
+  margin-left: 100px;
+  text-decoration: underline red;
+}
+
+// ヘッダー
+.header {
+  position: fixed;
+  z-index: 900;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid silver;
+  color: black;
+  background-color: white;
+  &__left {
+    float: left;
+    width: 160px;
+    margin: 0;
+    .logo {
+      margin: 10px 30px 10px 60px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .site-title {
+        font-size: 30px;
+      }
+      .site-sub-title{
+        font-size: 13px;
+        color: #313131;
+      }
+    }
+  }
+  &__right {
+    margin-right: 40px;
+    .menu {
+      float: right;
+      font-size: 13px;
+      .menu__item {
+        float: left;
+        margin: 30px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+// devise関連
 .login {
   width: 200px;
   height: 200px;
@@ -100,51 +153,69 @@ html {
 
 }
 
-.header {
-  position: fixed;
-  z-index: 900;
-  width: 100%;
-  height: 80px;
-  border-bottom: 1px solid silver;
-  color: black;
-  background-color: white;
-  &__left {
-    float: left;
-    width: 160px;
-    margin: 0;
-    .logo {
-      margin: 10px 30px 10px 60px;
-      a {
-        text-decoration: none;
-        color: black;
-      }
-      .site-title {
-        font-size: 30px;
-      }
-      .site-sub-title{
-        font-size: 13px;
-      }
+// リンク部分
+// 金継ぎ教室について
+.school {
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 90px;
+  left: 70px;
+  .about_kintsugi {
+    color: #5f5f5f;
+    float: right;
+    width: 800px;
+    h1 {
+      color: black;
+      font-size: 30px;
     }
   }
-  &__right {
-    margin-right: 40px;
-    .menu {
-      float: right;
-      font-size: 13px;
-      .menu__item {
-        float: left;
-        margin: 30px;
-        a {
-          text-decoration: none;
-          color: black;
-        }
-      }
-    }
+  .about_school {
+    color: #464646;
+    float: right;
+    width: 800px;
+  }
+}
+// カレンダー
+.calendar {
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 90px;
+  left: 330px;
+}
+// 予約フォーム
+.reservations{
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 90px;
+  left: 330px;
+}
+// アクセス
+.access {
+  height: calc(100vh - 80px);
+  width: 950px;
+  margin: 0 auto;
+  position: relative;
+  top: 90px; 
+  left: 180px;
+}
+// トップ画面に戻るボタン
+.top {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 50px;
+  a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: 1;
   }
 }
 
+
+// 投稿画面
 .message {
-  overflow: scroll; 
+  overflow: scroll;
   height: calc(100vh - 80px - 100px);
   position: relative;
   top: 85px;
@@ -153,25 +224,37 @@ html {
   &__title {
     padding: 30px 30px 30px 30px;
     font-family: sans-serif;
+    height: 10px;
+    width: 100%;
+    color: #5f5f5f;
    }
   &__timeline {
-    margin: 0 40px 0px 40px;
+    margin: 0 40px 5px 40px;
+    // border-bottom: 2px dotted silver;
     &__info {
+      // margin-left: 250px;
       display: flex;
       padding-top: 50px;
       padding-bottom: 10px;
+     
       &__user {
-        
+        color: black;
+        font-size: 15px;
       }
       &__date {
-        margin-left: 10px;
+        margin-left: 30px;
+        color: #313131; 
+        font-size: 15px;
       }
     }
     &__text {
+      // margin-left: 250px;
       margin-top: 10px;
+      color: #313131;
     }
     &__image {
       margin-top: 20px;
+      margin-left: 250px;
     }
   }
   &__post {
@@ -192,25 +275,33 @@ html {
           position: absolute;
           top: 18px;
           right: 210px;
-          .hidden {
-            display: none;
-          }
         }
       }
+      .hidden {
+        position: absolute;
+        right: 430px;
+        bottom: 20px;
+        width: 100px;
+      }
       &__submit {
-        margin-left: 5px;
-    }
+        position: absolute;
+        right: 360px;
+        bottom: 20px;
+      }
+      &__submit:hover {
+        color: red;
+      }
    }
    
   }
 }
-
+// フッター
 .footer {
   display: flex;
   justify-content: space-around;
   border-top: 1px dotted gray;
   position: relative;
-  top: 80px;
+  top: 180px;
   bottom: 0;
   margin: 0 auto;
   width: 80%;
@@ -218,87 +309,38 @@ html {
   margin-top: 10px;
   &__left {
     &__text {
-
+    font-size: 15px;
     }
   }
   &__right {
     &__about {
-      font-size: 15px;
+      font-size: 20px;
     }
     &__link {
-      font-size: 15px;
+      margin-top: 5px;
+      font-size: 13px;
       &__list {
         display: flex;
         position: relative;
         top: 0px;
         right: 0px;
-        font-size: 15px;
+        font-size: 20px;
       }
       .icon {
         color: black;
-        font-size: px;
-        margin-right: 8px;
+        margin-right: 5px;
+        margin-left: 8px;
       }
     }
   }
   &__copyright {
     position: relative;
-    top: 60px;
+    top: 150px;
     bottom: 0;
-    left: 650px;
+    left: 680px;
     width: 200px;
     height: 30px;
     font-size: 10px;
 }
-}
-
-.school {
-  height: calc(100vh - 80px);
-  position: relative;
-  top: 90px;
-  left: 70px;
-  .about_kintsugi {
-    float: right;
-    width: 800px;
-    h1 {
-      font-size: 30px;
-    }
-  }
-  .about_school {
-    float: right;
-    width: 800px;
-  }
-}
-
-.calendar {
-  height: calc(100vh - 80px);
-  position: relative;
-  top: 90px;
-  left: 330px;
-}
-
-.reservations{
-  height: calc(100vh - 80px);
-  position: relative;
-  top: 90px;
-  left: 330px;
-}
-
-.access {
-  height: calc(100vh - 80px);
-  width: 950px;
-  margin: 0 auto;
-  position: relative;
-  top: 90px; 
-  left: 180px;
-}
-.top {
-  width: 50px;
-  margin: 0 auto;
-  font-size: 50px;
-  a {
-    text-decoration: none;
-    color: black;
-  }
 }
 

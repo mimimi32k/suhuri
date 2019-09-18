@@ -36,7 +36,7 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|
+|content|string|
 |image|string|
 |user_id|references|null: false, foreign_key: true|
 ### Association
