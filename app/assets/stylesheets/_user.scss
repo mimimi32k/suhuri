@@ -1,0 +1,101 @@
+.user_nav {
+  .logout a{
+    text-decoration: none;
+    color: black;
+  }
+}
+.new_user {
+  
+}
+// devise関連
+.login {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 100px;
+  left: 500px;
+}
+
+.signup {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 100px;
+  left: 500px;
+}
+
+#user_name {
+  width: 300px;
+  height: 30px;
+}
+
+#user_email {
+  width: 300px;
+  height: 30px;
+}
+
+#user_password {
+  width: 300px;
+  height: 30px;
+}
+
+#user_password_confirmation {
+  width: 300px;
+  height: 30px;
+}
+
+.field3 {
+  width:300px;
+}
+
+.passwordfield {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.post {
+  font-family: sans-serif;
+  width: 80px;
+  height: 30px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 30px;
+  left: 450px;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: solid 1px #000000;
+  margin-right: 20px;
+}
+
+.logout {
+  font-family: sans-serif;
+  width: 80px;
+  height: 30px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 30px;
+  left: 550px;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: solid 1px #000000;
+}
+
+.reset {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  top: 100px;
+  left: 580px;
+}
+
+.actions-btn {
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+  border: solid 1px;
+  border-radius: 5px;
+
+}

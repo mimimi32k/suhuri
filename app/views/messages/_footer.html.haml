@@ -2,17 +2,17 @@
   .footer__left
     お知らせ
     .footer__left__text
-      今月の教室
+      = link_to "今月の教室", calendars_path
   .footer__right
     .footer__right__about
       suhuri
     .footer__right__link
       %ul.footer__right__link__list
         %li.link__list
-          = link_to do
+          = link_to "https://twitter.com/SUFURI3/", target: :_blank, rel: :noopener do
             = fa_icon 'twitter', class: 'icon'
         %li.link__list
-          = link_to do
+          = link_to "https://www.instagram.com/frasco_m/", target: :_blank, rel: :noopener do
             = fa_icon 'instagram', class: 'icon'
 .footer__copyright
   © 2019 suhuri.
